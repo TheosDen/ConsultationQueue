@@ -21,9 +21,12 @@
                 <!-- Add spacer, to align navigation to the right -->
                 <div class="mdl-layout-spacer"></div>
                 <!-- Accent-colored raised button with ripple -->
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                <button id="clear-all" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                     Clear
                 </button>
+                <div class="mdl-tooltip mdl-tooltip--large" for="clear-all">
+                    Clear all saved data and starts new queue.
+                </div>
             </div>
         </header>
 
@@ -34,11 +37,9 @@
             <!-- DESCRIPTION -->
             <div class="mdl-card mdl-shadow--2dp full-width">
                 <div class="mdl-card__supporting-text">
-                    <p>Следующий сотрудник идёт только после возвращения предыдущего.</p>
-                    <p>"Тот кто вернулся - сообщите следующему по очереди сотруднику
-                    (и если вам не ответят - отправьтесь на поиски сотрудника, чтобы очередь продолжала идти)"</p>
-
-                    <p>В колонку "время" запишите время, когда вернулись. Она помогает следующим сотрудникам понять, когда примерно дойдёт до них очередь.</p>
+                    <p>Следующий сотрудник идёт только после возвращения предыдущего.
+                    <p>Тот кто вернулся — сообщите следующему по очереди сотруднику (и если вам не ответят — отправьтесь на поиски сотрудника, чтобы очередь продолжала идти).
+                    <p>В колонку «время» запишите время, когда вернулись. Она помогает следующим сотрудникам понять, когда примерно дойдёт до них очередь.
                 </div>
             </div>
 
@@ -47,9 +48,12 @@
                 <div class="mdl-card__supporting-text">
                     Average duration <span> 0:15</span>
                     <!-- Flat button with ripple -->
-                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+                    <button id="reset-start-time" class="mdl-button mdl-js-button mdl-js-ripple-effect">
                         Reset
                     </button>
+                    <div class="mdl-tooltip mdl-tooltip--large" for="reset-start-time">
+                        Reset start time. Maybe not needed and will be removed.
+                    </div>
                 </div>
             </div>
 
@@ -94,14 +98,23 @@
                             </td>
                             <td>
                                 <!-- Mini FAB button -->
-                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+                                <button id="user-3-btn" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
                                     <i class="material-icons">update</i>
                                 </button>
+                                <div class="mdl-tooltip mdl-tooltip--large" for="user-3-btn">
+                                    Complete your queue<br>and send request<br>to next user.
+                                </div>
 
                                 <!-- MDL Spinner Component with Single Color -->
-                                <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+                                <div id="user-3-waiting" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+                                <div class="mdl-tooltip mdl-tooltip--large" for="user-3-waiting">
+                                    Waiting for confirmation<br>request from user...
+                                </div>
 
-                                <i class="material-icons">done</i>
+                                <i id="user-3-confirmed" class="material-icons">done</i>
+                                <div class="mdl-tooltip mdl-tooltip--large" for="user-3-confirmed">
+                                    User confirmed request.
+                                </div>
 
                             </td>
                             <td></td>
@@ -113,9 +126,12 @@
                             <td>Petka</td>
                             <td>
                                 <!-- Mini FAB button -->
-                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab show-on-row-hover">
+                                <button id="user-4-btn" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab show-on-row-hover">
                                     <i class="material-icons">autorenew</i>
                                 </button>
+                                <div class="mdl-tooltip mdl-tooltip--large" for="user-4-btn">
+                                    Change you position<br>with this user.
+                                </div>
                             </td>
                             <td></td>
                             <td></td>
@@ -126,9 +142,12 @@
                             <td>Vasya</td>
                             <td>
                                 <!-- Mini FAB button -->
-                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab show-on-row-hover">
+                                <button id="user-5-btn" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab show-on-row-hover">
                                     <i class="material-icons">autorenew</i>
                                 </button>
+                                <div class="mdl-tooltip mdl-tooltip--large" for="user-5-btn">
+                                    Change you position<br>with this user.
+                                </div>
                             </td>
                             <td></td>
                             <td></td>
