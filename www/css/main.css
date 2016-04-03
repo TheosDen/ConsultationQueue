@@ -3,7 +3,7 @@
 }
 
 .content-main-wrapper > div {
-    max-width: 960px;
+    max-width: 1200px;
     margin: 10px auto;
 }
 
@@ -11,10 +11,37 @@
     width: 100%;
 }
 
+/* TODO: set normal override */
+.mdl-textfield {
+    width: 100%;
+}
+
+.mdl-card__supporting-text {
+    width: 91%;
+}
+
+.mdl-data-table td {
+    padding: 12px 14px;
+}
+
+
+
 /**
 * Table
 * Need to refact this when templates will be rendered through script
 */
+
+th {
+    overflow: hidden;
+}
+
+.first-col {
+    width: 4%;
+}
+
+.narrow-col {
+    width: 10%;
+}
 
 .borderless {
     border: none;

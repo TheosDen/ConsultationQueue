@@ -44,9 +44,23 @@
             </div>
 
             <!-- DURATION -->
-            <div class="mdl-card mdl-shadow--2dp full-width">
+            <!--<div class="mdl-card mdl-shadow--2dp full-width">
                 <div class="mdl-card__supporting-text">
                     Average duration <span> 0:15</span>
+
+                    <button id="reset-start-time" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+                        Reset
+                    </button>
+                    <div class="mdl-tooltip mdl-tooltip--large" for="reset-start-time">
+                        Reset start time. Maybe not needed and will be removed.
+                    </div>
+                </div>
+            </div>-->
+
+            <!-- TABLE -->
+            <div class="mdl-card mdl-shadow--2dp full-width">
+                <div class="mdl-card__title">
+                    Average duration: <span> 0:15</span>
                     <!-- Flat button with ripple -->
                     <button id="reset-start-time" class="mdl-button mdl-js-button mdl-js-ripple-effect">
                         Reset
@@ -55,119 +69,122 @@
                         Reset start time. Maybe not needed and will be removed.
                     </div>
                 </div>
-            </div>
 
-            <!-- TABLE -->
-            <div class="mdl-card mdl-shadow--2dp full-width">
+                <div class="mdl-card__supporting-text">
 
-                <table class="mdl-data-table mdl-js-data-table qued-people-tbody full-width borderless">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th class="mdl-data-table__cell--non-numeric">Name</th>
-                            <th>Call</th>
-                            <th>Returns time</th>
-                            <th>Duration</th>
-                            <th>Approx</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Valerka</td>
-                            <td></td>
-                            <td>15:30</td>
-                            <td>0:15</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Vovka Zaporozkiy</td>
-                            <td></td>
-                            <td>15:45</td>
-                            <td>0:15</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>
-                                <div class="mdl-textfield mdl-js-textfield">
-                                    <input class="mdl-textfield__input" type="text" id="my-username" value="Denis">
-                                    <label class="mdl-textfield__label" for="my-username">Name...</label>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Mini FAB button -->
-                                <button id="user-3-btn" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
-                                    <i class="material-icons">update</i>
-                                </button>
-                                <div class="mdl-tooltip mdl-tooltip--large" for="user-3-btn">
-                                    Complete your queue<br>and send request<br>to next user.
-                                </div>
+                    <table class="mdl-data-table mdl-js-data-table qued-people-tbody full-width borderless">
+                        <thead>
+                            <tr>
+                                <th class="first-col">#</th>
+                                <th class="mdl-data-table__cell--non-numeric">Name</th>
+                                <th class="narrow-col">Call</th>
+                                <th class="narrow-col">Returns</th>
+                                <th class="narrow-col">Dur.</th>
+                                <th class="narrow-col">Approx</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>00</td>
+                                <td>
+                                    <div class="mdl-textfield mdl-js-textfield">
+                                        <input class="mdl-textfield__input" type="text" id="new-username">
+                                        <label class="mdl-textfield__label" for="new-username">Name...</label>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Valerka</td>
+                                <td></td>
+                                <td>15:30</td>
+                                <td>0:15</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Vovka Zaporozkiy</td>
+                                <td></td>
+                                <td>15:45</td>
+                                <td>0:15</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>
+                                    <div class="mdl-textfield mdl-js-textfield">
+                                        <input class="mdl-textfield__input" type="text" id="my-username" value="Denis">
+                                        <label class="mdl-textfield__label" for="my-username">Name...</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <!-- Mini FAB button -->
+                                    <button id="user-3-btn" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-js-ripple-effect">
+                                        <i class="material-icons">update</i>
+                                    </button>
+                                    <div class="mdl-tooltip mdl-tooltip--large" for="user-3-btn">
+                                        Complete your queue<br>and send request<br>to next user.
+                                    </div>
 
-                                <!-- MDL Spinner Component with Single Color -->
-                                <div id="user-3-waiting" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
-                                <div class="mdl-tooltip mdl-tooltip--large" for="user-3-waiting">
-                                    Waiting for confirmation<br>request from user...
-                                </div>
+                                    <br>
 
-                                <i id="user-3-confirmed" class="material-icons">done</i>
-                                <div class="mdl-tooltip mdl-tooltip--large" for="user-3-confirmed">
-                                    User confirmed request.
-                                </div>
+                                    <!-- MDL Spinner Component with Single Color -->
+                                    <div id="user-3-waiting" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+                                    <div class="mdl-tooltip mdl-tooltip--large" for="user-3-waiting">
+                                        Waiting for confirmation<br>request from user...
+                                    </div>
 
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td>15:45</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Petka</td>
-                            <td>
-                                <!-- Mini FAB button -->
-                                <button id="user-4-btn" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab show-on-row-hover">
-                                    <i class="material-icons">autorenew</i>
-                                </button>
-                                <div class="mdl-tooltip mdl-tooltip--large" for="user-4-btn">
-                                    Change you position<br>with this user.
-                                </div>
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td>16:00</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Vasya</td>
-                            <td>
-                                <!-- Mini FAB button -->
-                                <button id="user-5-btn" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab show-on-row-hover">
-                                    <i class="material-icons">autorenew</i>
-                                </button>
-                                <div class="mdl-tooltip mdl-tooltip--large" for="user-5-btn">
-                                    Change you position<br>with this user.
-                                </div>
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td>16:15</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>
-                                <div class="mdl-textfield mdl-js-textfield">
-                                    <input class="mdl-textfield__input" type="text" id="new-username">
-                                    <label class="mdl-textfield__label" for="new-username">Name...</label>
-                                </div>
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+                                    <br>
+
+                                    <i id="user-3-confirmed" class="material-icons">done</i>
+                                    <div class="mdl-tooltip mdl-tooltip--large" for="user-3-confirmed">
+                                        User confirmed request.
+                                    </div>
+
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td>15:45</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Petka</td>
+                                <td>
+                                    <!-- Mini FAB button -->
+                                    <button id="user-4-btn" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect show-on-row-hover">
+                                        <i class="material-icons">autorenew</i>
+                                    </button>
+                                    <div class="mdl-tooltip mdl-tooltip--large" for="user-4-btn">
+                                        Change you position<br>with this user.
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td>16:00</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Vasya</td>
+                                <td>
+                                    <!-- Mini FAB button -->
+                                    <button id="user-5-btn" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect show-on-row-hover">
+                                        <i class="material-icons">autorenew</i>
+                                    </button>
+                                    <div class="mdl-tooltip mdl-tooltip--large" for="user-5-btn">
+                                        Change you position<br>with this user.
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td>16:15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <!-- COMMENTS -->
@@ -179,8 +196,8 @@
                     <!-- Floating Multiline Textfield -->
                     <form action="#">
                         <div class="mdl-textfield mdl-js-textfield textfield-wide">
-                            <textarea class="mdl-textfield__input" type="text" rows= "15" id="sample5" ></textarea>
-                            <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+                            <textarea class="mdl-textfield__input" type="text" rows= "15" id="comments-txt" ></textarea>
+                            <label class="mdl-textfield__label" for="comments-txt">Text lines... (under constraction)</label>
                         </div>
                     </form>
                 </div>
