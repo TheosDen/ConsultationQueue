@@ -1,0 +1,61 @@
+.content-main-wrapper {
+    background-color: #f5f5f5;
+}
+
+.content-main-wrapper > div {
+    max-width: 960px;
+    margin: 10px auto;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/**
+* Table
+* Need to refact this when templates will be rendered through script
+*/
+
+.borderless {
+    border: none;
+}
+
+.show-on-row-hover {
+    visibility: hidden;
+}
+
+tr:hover .show-on-row-hover {
+    visibility: visible;
+}
+
+.qued-people-tbody td {
+    height: 65px; /* need to use rem instead of pixels in future */
+    /* border-top: 1px solid rgba(0,0,0,.05); */
+    border-top: none;
+    border-bottom: none;
+}
+
+.qued-people-tbody td:nth-child(2) {
+    text-align: left;
+}
+
+.qued-people-tbody th {
+    font-size: large;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+
+/**
+* Comments
+*/
+.page-content {
+    background-color: #fff;
+}
+
+.card-wide {
+    width: 100%;
+}
+
+.textfield-wide {
+    width: 100%;
+}
